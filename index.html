@@ -4,370 +4,189 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>CV - Djepie Dassi Merveille</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <style>
-    :root {
-      --bg: #f6efea;
-      --bg-2: #f2e7e0;
-      --rose: #d9b8a7;
-      --rose-2: #e7cdc0;
-      --rose-3: #eedfd6;
-      --text: #4b312f;
-      --text-soft: #5e4541;
-      --accent: #bc7f33;
-      --line: #d6c0b2;
-      --white: #fffaf7;
-      --shadow: 0 10px 25px rgba(108, 77, 61, 0.08);
+    @page {
+      size: A4;
+      margin: 10mm;
     }
 
-    * { box-sizing: border-box; }
+    * {
+      box-sizing: border-box;
+    }
 
     body {
       margin: 0;
-      background: #ece2dc;
-      font-family: 'Montserrat', sans-serif;
-      color: var(--text);
-      padding: 18px;
+      padding: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      color: #2f2f2f;
+      background: white;
     }
 
     .page {
-      width: 794px;
-      min-height: 1123px;
+      width: 190mm;
+      min-height: 277mm;
       margin: 0 auto;
-      background:
-        radial-gradient(circle at 22% 16%, rgba(255,255,255,0.35) 0 12%, transparent 12.3%),
-        radial-gradient(circle at 73% 8%, rgba(255,255,255,0.16) 0 17%, transparent 17.3%),
-        linear-gradient(180deg, rgba(255,255,255,0.22), rgba(255,255,255,0.12)),
-        linear-gradient(180deg, var(--bg) 0%, #f7efea 100%);
-      position: relative;
-      overflow: hidden;
-      box-shadow: 0 16px 45px rgba(64, 41, 34, 0.16);
+      padding: 8mm 10mm;
+      background: #fff;
     }
 
-    .page::before,
-    .page::after {
-      content: "";
-      position: absolute;
-      pointer-events: none;
-      inset: 0;
-    }
-
-    .page::before {
-      background:
-        radial-gradient(ellipse at 88% -6%, rgba(199, 160, 143, 0.38) 0 16%, transparent 16.4%),
-        radial-gradient(ellipse at 105% 94%, rgba(203, 167, 148, 0.30) 0 19%, transparent 19.3%),
-        radial-gradient(ellipse at 8% 108%, rgba(221, 193, 178, 0.24) 0 24%, transparent 24.3%);
-      z-index: 0;
-    }
-
-    .page::after {
-      background-image:
-        radial-gradient(rgba(151, 112, 92, 0.05) 0.7px, transparent 0.8px),
-        radial-gradient(rgba(151, 112, 92, 0.03) 0.7px, transparent 0.8px);
-      background-size: 18px 18px, 24px 24px;
-      background-position: 0 0, 8px 9px;
-      mix-blend-mode: multiply;
-      opacity: .6;
-      z-index: 0;
-    }
-
-    .inner {
-      position: relative;
-      z-index: 1;
-      padding: 34px 42px 38px;
-    }
-
-    .title {
-      font-family: 'Cormorant Garamond', serif;
-      font-size: 54px;
-      line-height: 0.95;
-      font-weight: 700;
-      letter-spacing: .2px;
-      margin: 0 0 10px;
-      color: #4a2d2c;
-    }
-
-    .subtitle {
-      font-size: 27px;
-      font-weight: 500;
-      margin: 0 0 18px;
-      color: #5b413d;
-    }
-
-    .top-line {
-      height: 2px;
-      background: linear-gradient(90deg, rgba(192,158,144,.55), rgba(192,158,144,.18));
-      margin-bottom: 18px;
-    }
-
-    .contact {
-      margin-bottom: 24px;
-    }
-
-    .contact-row {
-      display: flex;
-      align-items: center;
-      gap: 16px;
-      font-size: 22px;
-      color: #5e4541;
-      margin-bottom: 14px;
-      line-height: 1.3;
-    }
-
-    .contact-row.small-gap { gap: 14px; }
-
-    .icon {
-      width: 28px;
-      text-align: center;
-      color: #6a3f33;
-      font-size: 28px;
-      line-height: 1;
-      flex: 0 0 28px;
-    }
-
-    .pipe {
-      color: #b4917f;
-      font-weight: 600;
-      margin: 0 2px;
-    }
-
-    .section-band {
-      background: linear-gradient(90deg, rgba(220, 187, 171, .92), rgba(230, 207, 195, .72));
-      border-radius: 26px 0 0 26px;
-      height: 44px;
-      display: flex;
-      align-items: center;
-      padding: 0 18px 0 14px;
-      gap: 12px;
-      margin: 22px 0 16px;
-      color: #5a3b35;
-      text-transform: uppercase;
-      font-size: 21px;
-      font-weight: 700;
-      letter-spacing: .3px;
-      box-shadow: inset 0 0 0 1px rgba(255,255,255,.25);
-    }
-
-    .section-band .badge {
-      width: 32px;
-      height: 32px;
-      border-radius: 50%;
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      background: rgba(255, 248, 243, 0.55);
-      color: #7a5547;
-      font-size: 18px;
-      box-shadow: inset 0 0 0 1px rgba(188,127,51,.15);
-      flex: 0 0 auto;
-    }
-
-    .profile-text {
-      font-size: 22px;
-      line-height: 1.7;
-      color: var(--text-soft);
-      margin: 0 0 14px;
-    }
-
-    .grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 0 34px;
-      align-items: start;
-      position: relative;
-      margin-top: 8px;
-    }
-
-    .grid::before {
-      content: "";
-      position: absolute;
-      left: calc(50% - 1px);
-      top: 74px;
-      bottom: 32px;
-      width: 2px;
-      background: linear-gradient(180deg, rgba(205,176,160,.9), rgba(205,176,160,.25));
-    }
-
-    .col { position: relative; }
-
-    .sub-band {
-      height: 42px;
-      background: linear-gradient(90deg, rgba(217,184,167,.96), rgba(232,211,201,.78));
-      display: flex;
-      align-items: center;
-      gap: 12px;
-      padding: 0 16px 0 12px;
-      border-radius: 4px 0 0 4px;
-      color: #5f403a;
-      text-transform: uppercase;
-      font-size: 19px;
-      font-weight: 700;
-      letter-spacing: .3px;
-      margin: 0 0 18px;
-      box-shadow: inset 0 0 0 1px rgba(255,255,255,.22);
-    }
-
-    .sub-band .square-badge {
-      width: 28px;
-      height: 28px;
-      border-radius: 6px;
-      background: rgba(255,248,243,.62);
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 16px;
-      color: #a46f2d;
-      box-shadow: inset 0 0 0 1px rgba(188,127,51,.18);
-      flex: 0 0 auto;
-    }
-
-    .edu-list,
-    .skills-list,
-    .exp-list {
-      list-style: none;
-      padding: 0;
+    h1, h2, h3, p {
       margin: 0;
     }
 
-    .edu-list li,
-    .skills-list li,
-    .exp-list li {
-      position: relative;
-      padding-left: 24px;
-      margin-bottom: 18px;
-      color: #5a403c;
-      line-height: 1.45;
-      font-size: 22px;
+    .header {
+      border-bottom: 2px solid #b07a5a;
+      padding-bottom: 6mm;
+      margin-bottom: 6mm;
     }
 
-    .edu-list li::before,
-    .skills-list li::before,
-    .exp-list li::before {
-      content: "✔";
-      position: absolute;
-      left: 0;
-      top: 1px;
-      color: var(--accent);
-      font-size: 18px;
-      font-weight: 800;
+    .name {
+      font-size: 24px;
+      font-weight: 700;
+      color: #4b312f;
+      margin-bottom: 2mm;
     }
 
-    .edu-list li { padding-left: 0; }
-    .edu-list li::before { display: none; }
+    .job {
+      font-size: 14px;
+      font-weight: 600;
+      color: #7a5a4f;
+      margin-bottom: 4mm;
+    }
+
+    .contact {
+      font-size: 11px;
+      line-height: 1.5;
+    }
+
+    .contact span {
+      display: inline-block;
+      margin-right: 10px;
+    }
+
+    .section {
+      margin-bottom: 5mm;
+    }
+
+    .section-title {
+      font-size: 13px;
+      font-weight: 700;
+      text-transform: uppercase;
+      color: #fff;
+      background: #b07a5a;
+      padding: 5px 8px;
+      margin-bottom: 3mm;
+      letter-spacing: 0.3px;
+    }
+
+    .profile {
+      font-size: 11px;
+      line-height: 1.5;
+      text-align: justify;
+    }
+
+    .grid {
+      display: table;
+      width: 100%;
+      table-layout: fixed;
+    }
+
+    .col {
+      display: table-cell;
+      width: 50%;
+      vertical-align: top;
+      padding-right: 6mm;
+    }
+
+    .col:last-child {
+      padding-right: 0;
+      padding-left: 6mm;
+      border-left: 1px solid #d8c6bc;
+    }
+
+    ul {
+      margin: 0;
+      padding-left: 16px;
+    }
+
+    li {
+      font-size: 11px;
+      line-height: 1.4;
+      margin-bottom: 2.5mm;
+    }
 
     .year {
       font-weight: 700;
-      color: #4c332f;
+      color: #4b312f;
     }
 
-    .exp-list li {
-      margin-bottom: 14px;
+    .small {
+      font-size: 10px;
+      color: #666;
     }
 
-    .exp-list .small {
-      font-size: 17px;
-      color: #7b6159;
-      line-height: 1.35;
-      display: inline;
+    .skills-list li,
+    .exp-list li,
+    .edu-list li {
+      margin-bottom: 2mm;
     }
 
-    .italic-note {
-      font-size: 16px;
-      color: #8c6f65;
+    .software {
+      font-size: 11px;
+      line-height: 1.5;
     }
 
-    .bottom-space { margin-top: 12px; }
-
-    .office-icons {
-      display: flex;
-      align-items: center;
-      gap: 12px;
-      margin-top: 8px;
-      padding-left: 6px;
+    .tag {
+      display: inline-block;
+      border: 1px solid #b07a5a;
+      padding: 2px 6px;
+      margin: 2px 4px 2px 0;
+      border-radius: 3px;
+      font-size: 10px;
+      color: #4b312f;
     }
 
-    .office-box {
-      width: 36px;
-      height: 36px;
-      border-radius: 6px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: white;
-      font-size: 21px;
-      font-weight: 800;
-      box-shadow: var(--shadow);
-    }
+    @media print {
+      body {
+        background: white;
+      }
 
-    .w { background: linear-gradient(180deg, #2b63c3, #1c4ea3); }
-    .x { background: linear-gradient(180deg, #2f9c56, #237746); }
-    .p { background: linear-gradient(180deg, #cf6323, #ae4a12); }
-
-    .office-text {
-      font-size: 22px;
-      color: #5a403c;
-    }
-
-    @media (max-width: 850px) {
-      body { padding: 0; }
       .page {
+        margin: 0;
         width: 100%;
         min-height: auto;
+        padding: 0;
       }
-      .inner { padding: 26px 20px 28px; }
-      .title { font-size: 42px; }
-      .subtitle { font-size: 22px; }
-      .contact-row,
-      .profile-text,
-      .edu-list li,
-      .skills-list li,
-      .exp-list li,
-      .office-text { font-size: 18px; }
-      .grid {
-        grid-template-columns: 1fr;
-        gap: 12px;
-      }
-      .grid::before { display: none; }
     }
   </style>
 </head>
 <body>
   <div class="page">
-    <div class="inner">
-      <h1 class="title">Djepie Dassi Merveille</h1>
-      <div class="subtitle">Éducatrice spécialisée en formation</div>
-      <div class="top-line"></div>
-
+    <div class="header">
+      <div class="name">Djepie Dassi Merveille</div>
+      <div class="job">Éducatrice spécialisée en formation</div>
       <div class="contact">
-        <div class="contact-row"><span class="icon">📍</span><span>Rue du Fort Mahon 21, 7012 Jemappes</span></div>
-        <div class="contact-row"><span class="icon">📍</span><span>Avenue Gustave Demey 232, 1160 Auderghem</span></div>
-        <div class="contact-row small-gap">
-          <span class="icon">📞</span>
-          <span>+32 465 578 033</span>
-          <span class="pipe">|</span>
-          <span class="icon" style="font-size:24px; width:24px; flex-basis:24px;">✉</span>
-          <span>Email :&nbsp; dassisharlene729@gmail.com</span>
-        </div>
+        <span>Rue du Fort Mahon 21, 7012 Jemappes</span>
+        <span>Avenue Gustave Demey 232, 1160 Auderghem</span><br>
+        <span>Tél. : +32 465 578 033</span>
+        <span>Email : dassisharlene729@gmail.com</span>
       </div>
+    </div>
 
-      <div class="section-band"><span class="badge">👤</span> Profil</div>
-
-      <p class="profile-text">
+    <div class="section">
+      <div class="section-title">Profil</div>
+      <p class="profile">
         Actuellement en première année de formation d’éducatrice spécialisée au CPFB et à l’IPFC,
         je souhaite m’investir dans un poste du secteur social afin de développer mes compétences
-        professionnelles.
+        professionnelles. Je me décris comme sérieuse, dynamique et à l’écoute, motivée à accompagner
+        des personnes dans leur quotidien et à travailler en équipe.
       </p>
+    </div>
 
-      <p class="profile-text" style="margin-bottom: 20px;">
-        Je me décris comme <strong>sérieuse, dynamique</strong> et <strong>à l’écoute</strong>, motivée à accompagner des
-        personnes dans leur quotidien et à travailler en équipe.
-      </p>
-
-      <div class="grid">
-        <div class="col">
-          <div class="sub-band"><span class="square-badge">📜</span> Formation</div>
+    <div class="grid">
+      <div class="col">
+        <div class="section">
+          <div class="section-title">Formation</div>
           <ul class="edu-list">
             <li><span class="year">2025 – à ce jour</span> : Formation d’éducatrice spécialisée (CPFB – IPFC)</li>
             <li><span class="year">2019 – 2020</span> : Formation en secrétariat, bureautique et informatique</li>
@@ -376,8 +195,10 @@
             <li><span class="year">2015 – 2016</span> : Advanced Level</li>
             <li><span class="year">2013 – 2014</span> : Ordinary Level</li>
           </ul>
+        </div>
 
-          <div class="sub-band bottom-space"><span class="square-badge">✔</span> Compétences</div>
+        <div class="section">
+          <div class="section-title">Compétences</div>
           <ul class="skills-list">
             <li>Sens du contact et de l’écoute</li>
             <li>Travail en équipe</li>
@@ -385,21 +206,24 @@
             <li>Respect du cadre et des consignes</li>
             <li>Capacité d’observation</li>
           </ul>
-
-          <div class="sub-band bottom-space"><span class="square-badge">💻</span> Informatique</div>
-          <div class="office-icons">
-            <div class="office-box w">W</div>
-            <div class="office-box x">X</div>
-            <div class="office-box p">P</div>
-            <div class="office-text">PowerPoint</div>
-          </div>
         </div>
 
-        <div class="col">
-          <div class="sub-band"><span class="square-badge">💼</span> Expérience professionnelle</div>
+        <div class="section">
+          <div class="section-title">Informatique</div>
+          <div class="software">
+            <span class="tag">Word</span>
+            <span class="tag">Excel</span>
+            <span class="tag">PowerPoint</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="col">
+        <div class="section">
+          <div class="section-title">Expérience professionnelle</div>
           <ul class="exp-list">
             <li><strong>Stage – Casa Hestia</strong> <span class="small">(septembre à décembre 2025)</span></li>
-            <li><strong>Stage – La Sapinière de Seneffe</strong><br><span class="small">(janvier à mars 2026)</span></li>
+            <li><strong>Stage – La Sapinière de Seneffe</strong> <span class="small">(janvier à mars 2026)</span></li>
             <li>Plonge et commis de cuisine – Thaï Orchid</li>
             <li>Serveuse et commis de cuisine – Ket Café</li>
             <li>Serveuse – Touch Down</li>
@@ -407,16 +231,18 @@
             <li>Caissière / Réassort – Delhaize</li>
             <li>Préparatrice de commandes – Colruyt</li>
             <li>Cuisine froide / Plonge – Lucy Chang</li>
-            <li>Serveuse – Buffet à volonté / Number One / Carrefour Express 2025)</li>
+            <li>Serveuse – Buffet à volonté / Number One / Carrefour Express</li>
           </ul>
+        </div>
 
-          <div class="sub-band bottom-space"><span class="square-badge">☑</span> Compétences</div>
+        <div class="section">
+          <div class="section-title">Atouts</div>
           <ul class="skills-list">
-            <li>Sens du contact et de l’écoute</li>
-            <li>Travail en équipe</li>
-            <li>Adaptabilité</li>
-            <li>Respect du cadre et des consignes</li>
-            <li>Capacité d’observation</li>
+            <li>Bonne présentation</li>
+            <li>Polyvalence</li>
+            <li>Motivation à apprendre</li>
+            <li>Sens des responsabilités</li>
+            <li>Capacité à travailler avec différents publics</li>
           </ul>
         </div>
       </div>
